@@ -54,17 +54,64 @@ inquirer
         message: 'Enter your email',
         name: 'email',
       },
-  ])
-  .then(() =>
-     console.log('ReadMe generated!')
-  );
+  ]);
+  
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+const writeToFile = ({ title, description, installationInstructions, usageInformation, contributionGuidelines, testInstructions, gitHUb, license, email  }) => {
+    `${title}'s Read Me
+    
+    ## Description 
+    
+    ${description}
+    
+    ## Table of Contents
+    - [Installation](#installation)
+    - [Usage](#usage)
+    - [License](#license)
+    - [Contributing](#contributing)
+    - [Tests](#tests)
+    - [Questions](#questions)
+    
+    ## Installation
+    
+    ${installationInstructions}
+    
+    ## Usage 
+    
+    ${usageInformation}
+    
+    ## License
+    
+    ${license}
+    
+    ## Contributing
+    
+    ${contributionGuidelines}
+    
+    ## Tests
+    
+    ${testInstructions}
+    
+    ## Questions
+    
+    Feel free to add any issues and contact me at ${email} if you have any questions;
+    Follow my code: ${gitHUb};
+    
+    `
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+const init = () => {
+    promptUser()
+    // Use writeFileSync method to use promises instead of a callback function
+      .then((answers) => fs.writeFileSync('index.html', writeToFile(answers)))
+      .then(() => console.log('Successfully wrote to index.html'))
+      .catch((err) => console.error(err));
+  };
+  
+  init();
 
 // Function call to initialize app
 init();
