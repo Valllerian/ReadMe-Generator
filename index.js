@@ -106,12 +106,12 @@ const writeToFile = ({ title, description, installationInstructions, usageInform
 const init = () => {
     promptUser()
     // Use writeFileSync method to use promises instead of a callback function
-      .then((answers) => fs.writeFileSync('index.html', writeToFile(answers)))
-      .then(() => console.log('Successfully wrote to index.html'))
+      .then((answers) => fs.writeFileSync('ReadMe.md', writeToFile(answers)))
+      .then(() => console.log('Successfully created a ReadMe file!'))
       .catch((err) => console.error(err));
   };
   
-  init();
+
 
 // Function call to initialize app
 init();
