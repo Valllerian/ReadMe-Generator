@@ -38,11 +38,25 @@ inquirer
         message: 'Enter projects test instructions',
         name: 'testInstructions',
       },
+      {
+        type: 'input',
+        message: 'Enter your github Username',
+        name: 'gitHUb',
+      },
+      {
+        type: 'list',
+        name: 'license',
+        message: 'What is application license?',
+        choices: ['MIT', 'Apache', 'Boost', 'BSD', 'Eclipse', 'GNU GPL v3', 'GNU AGPL v3', 'Mozilla', 'Open Database License (ODbL)'],
+      },
+      {
+        type: 'input',
+        message: 'Enter your email',
+        name: 'email',
+      },
   ])
-  .then((response) =>
-    response.confirm === response.password
-      ? console.log('Success!')
-      : console.log('You forgot your password already?!')
+  .then(() =>
+     console.log('ReadMe generated!')
   );
 
 
