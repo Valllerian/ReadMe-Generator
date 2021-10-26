@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
-const { join } = require('path');
+const licenseGenerator = require('./utils/generateMarkdown.js');
 
 
 // TODO: Create an array of questions for user input
@@ -85,7 +85,7 @@ ${usageInformation}
     
 ## License
     
-${license}
+${licenseGenerator.renderLicenseSection(license)}
     
 ## Contributing
     
@@ -97,8 +97,9 @@ ${testInstructions}
     
 ## Questions
     
-Feel free to add any issues and contact me at ${email} if you have any questions;
-Follow my code: ${gitHUb};
+- Feel free to add any issues and contact me at ${email} if you have any questions;
+
+- Follow my code: https://github.com/${gitHUb};
     
 `;
 
@@ -115,3 +116,5 @@ const init = () => {
 
 // Function call to initialize app
 init();
+
+
