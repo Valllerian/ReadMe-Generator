@@ -1,13 +1,14 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
+const { join } = require('path');
 
 
 // TODO: Create an array of questions for user input
 const questions = [];
 
-inquirer
-  .prompt([
+const promptUser = () => {
+    return inquirer.prompt([
      {
       type: 'input',
       message: 'Enter projects title',
@@ -55,18 +56,18 @@ inquirer
         name: 'email',
       },
   ]);
-  
+};
 
 
 // TODO: Create a function to write README file
-const writeToFile = ({ title, description, installationInstructions, usageInformation, contributionGuidelines, testInstructions, gitHUb, license, email  }) => {
+const writeToFile = ({ title, description, installationInstructions, usageInformation, contributionGuidelines, testInstructions, gitHUb, license, email  }) => 
     `${title}'s Read Me
     
-    ## Description 
+## Description 
     
-    ${description}
+${description}
     
-    ## Table of Contents
+## Table of Contents
     - [Installation](#installation)
     - [Usage](#usage)
     - [License](#license)
@@ -74,33 +75,32 @@ const writeToFile = ({ title, description, installationInstructions, usageInform
     - [Tests](#tests)
     - [Questions](#questions)
     
-    ## Installation
+## Installation
     
-    ${installationInstructions}
+${installationInstructions}
     
-    ## Usage 
+## Usage 
     
-    ${usageInformation}
+${usageInformation}
     
-    ## License
+## License
     
-    ${license}
+${license}
     
-    ## Contributing
+## Contributing
     
-    ${contributionGuidelines}
+${contributionGuidelines}
     
-    ## Tests
+## Tests
     
-    ${testInstructions}
+${testInstructions}
     
-    ## Questions
+## Questions
     
-    Feel free to add any issues and contact me at ${email} if you have any questions;
-    Follow my code: ${gitHUb};
+Feel free to add any issues and contact me at ${email} if you have any questions;
+Follow my code: ${gitHUb};
     
-    `
-}
+`;
 
 // TODO: Create a function to initialize app
 const init = () => {
