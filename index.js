@@ -61,11 +61,14 @@ const promptUser = () => {
 
 // TODO: Create a function to write README file
 const writeToFile = ({ title, description, installationInstructions, usageInformation, contributionGuidelines, testInstructions, gitHUb, license, email  }) => 
-    `${title}'s Read Me
+    `
+<h1>${title}'s Read Me</h1>
     
 ## Description 
     
 ${description}
+
+${licenseGenerator.renderLicenseBadge(license)}
     
 ## Table of Contents
 - [Installation](#installation)

@@ -75,7 +75,6 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
   if (license === "MIT"){
     return `
-${renderLicenseBadge(license)}
 
 Copyright [2021] 
 
@@ -91,7 +90,6 @@ Find more information at ${renderLicenseLink(license)}.`
   };
   if (license === "Apache"){
     return `
-${renderLicenseBadge(license)}
 
 Copyright [2021] 
 
@@ -109,7 +107,6 @@ limitations under the License.`
   };
   if (license === "Boost"){
     return `
-${renderLicenseBadge(license)}
 
 Boost Software License - Version 1.0 - August 17th, 2003
 
@@ -140,8 +137,7 @@ Find more information at ${renderLicenseLink(license)}.`
   };
   if (license === "BSD"){
     return `
-${renderLicenseBadge(license)}
-    
+
 Copyright [2021] 
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
@@ -159,14 +155,12 @@ Find more information at ${renderLicenseLink(license)}.`
   };
   if (license === "Eclipse"){
     return `
-${renderLicenseBadge(license)}
 
 This Source Code Form is subject to the terms of the Eclipse Public License version 2.0 If a copy of the MPL was not distributed with this file, You can obtain one at ${renderLicenseLink(license)}`
   };
   if (license === "GNU GPL v3"){
     return `
-${renderLicenseBadge(license)}
-    
+ 
 Copyright (C) [2021] 
 
 This program is free software: you can redistribute it and/or modify
@@ -185,8 +179,7 @@ along with this program.  If not, see ${renderLicenseLink(license)}.`
   };
   if (license === "GNU AGPL v3"){
     return `
-${renderLicenseBadge(license)}
-    
+
 Copyright (C) [2021]
 
 This program is free software: you can redistribute it and/or modify
@@ -204,13 +197,11 @@ along with this program.  If not, see ${renderLicenseLink(license)}`
   };
   if (license === "Mozilla"){
     return `
-${renderLicenseBadge(license)}
-    
+
 This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at ${renderLicenseLink(license)}`
   };
   if (license === "Open Database License (ODbL)'"){
     return `
-${renderLicenseBadge(license)}
 
 This Source Code Form is subject to the terms of the Open Database License (ODbL) v1.0. If a copy of the MPL was not distributed with this file, You can obtain one at ${renderLicenseLink(license)}`
   };
