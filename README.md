@@ -10,7 +10,9 @@ With this app you can  quickly and easily create a README file by using a comman
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 <h2>App usage video walkthrough:</h2>
-https://youtu.be/WuSBWard85k
+
+<a href="https://youtu.be/WuSBWard85k" target="_blank">Watch on YouTube</a>
+
 
 ## Table of Contents
 - [Installation](#installation)
