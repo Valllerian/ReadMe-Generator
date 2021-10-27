@@ -1,12 +1,9 @@
-// TODO: Include packages needed for this application
+// Including packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
 const licenseGenerator = require('./utils/generateMarkdown.js');
 
-
-// TODO: Create an array of questions for user input
-const questions = [];
-
+// inquirer prompts:
 const promptUser = () => {
     return inquirer.prompt([
      {
@@ -59,7 +56,7 @@ const promptUser = () => {
 };
 
 
-// TODO: Create a function to write README file
+// Creating a function to generate README file 
 const writeToFile = ({ title, description, installationInstructions, usageInformation, contributionGuidelines, testInstructions, gitHUb, license, email  }) => 
     `
 <h1>${title}'s Read Me</h1>
@@ -106,10 +103,10 @@ ${testInstructions}
     
 `;
 
-// TODO: Create a function to initialize app
+// Creating a function to initialize app
 const init = () => {
     promptUser()
-    // Use writeFileSync method to use promises instead of a callback function
+    // Using writeFileSync method to use promises instead of a callback function
       .then((answers) => fs.writeFileSync('ReadMe.md', writeToFile(answers)))
       .then(() => console.log('Successfully created a ReadMe file!'))
       .catch((err) => console.error(err));

@@ -1,9 +1,9 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+// function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-
-
 function renderLicenseBadge(license) {
+  // if statement defines what license was used
   if (license === "MIT"){
+    // returns a clickable license badge with a link to the main website
     return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
   };
   if (license === "Apache"){
@@ -35,10 +35,11 @@ function renderLicenseBadge(license) {
   };
 }
 
-// TODO: Create a function that returns the license link
+// function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license === "MIT"){
+    // returns a link to the license main website
     return `https://opensource.org/licenses/MIT`
   };
   if (license === "Apache"){
@@ -69,11 +70,12 @@ function renderLicenseLink(license) {
     return ``;
   };
 }
-// TODO: Create a function that returns the license section of README
+// function that returns the license section of README
 // If there is no license, return an empty string
 
 function renderLicenseSection(license) {
   if (license === "MIT"){
+    // returns main license statement
     return `
 
 Copyright [2021] 
@@ -210,6 +212,7 @@ This Source Code Form is subject to the terms of the Open Database License (ODbL
   };
 }
 
+// exporting the module to be able to use these functions in main index.js file
 module.exports = {
   renderLicenseBadge, renderLicenseLink, renderLicenseSection
 };
